@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9f1b01a0bb.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="título">
+            Generador de memes
+        </h1>
+        <div class="botones-del-contenedor">
+            <button class="botón-imagen" id="panel-botón-imagen"> <i class="fa-solid fa-image" aria-hidden="true"></i> Imagen
+            </button>
+            <button class="botón-texto" id="panel-botón-texto"> <i class="fa-solid fa-text" aria-hidden="true" ></i> Texto
+            </button>
+            <button class="botón-modo-oscuro" id="panel-botón-modo-oscuro"> <i class="fa-light fa-lightbulb" aria-hidden="true"></i> modo oscuro
+            </button>
+        </div>
+    </header>
+    <main class="contendor-memes">
+        <p id="top-text" class="texto-meme" style="font-family: Impact; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); position: static;">TOP TEXT</p>
+    </main>
+    <aside class="panel-de-cambios">
+    </aside>
+</body>
+</html>
