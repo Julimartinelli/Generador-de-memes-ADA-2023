@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9f1b01a0bb.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9f1b01a0bb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="título">
-            Generador de memes
-        </h1>
-        <div class="botones-del-contenedor">
-            <button class="botón botón-imagen" id="panel-botón-imagen"> <i class="fa-solid fa-image" aria-hidden="true"></i> Imagen
-            </button>
-            <button class="botón botón-texto" id="panel-botón-texto"> <i class="fa-solid fa-text" aria-hidden="true" ></i> Texto
-            </button>
-            <button class="botón botón-modo-oscuro" id="panel-botón-modo-oscuro"> <i class="fa-light fa-lightbulb" aria-hidden="true"></i> modo oscuro
-            </button>
-        </div>
+      <h1 class="título">Generador de memes</h1>
+      <div class="botones-del-contenedor">
+        <button class="botón botón-imagen" id="panel-botón-imagen">
+          <i class="fa-solid fa-image" aria-hidden="true"></i> Imagen
+        </button>
+        <button class="botón botón-texto" id="panel-botón-texto">
+          <i class="fa-solid fa-text" aria-hidden="true"></i> Texto
+        </button>
+        <button class="botón botón-modo-oscuro" id="panel-botón-modo-oscuro">
+          <i class="fa-light fa-lightbulb" aria-hidden="true"></i> modo oscuro
+        </button>
+      </div>
     </header>
+
+    <div class="contenedor-memes">
+      <div class= "contenedor-texto top-text">
+        <p class="texto">TOP TEXT</p>
+      </div>
+      <div class="imagen-meme"></div>
+      <div class="contenedor-texto bottom-text">
+        <p class="texto"> BOTTOM TEXT</p>
+      </div>
     </div>
-</body>
+    
+
+
+    <script type="javascript" src="script.js"></script>
+  </body>
 </html>
