@@ -1,51 +1,35 @@
 body{
     display: flex;
-    color: rgb(255, 255, 255);
+    flex-direction: column;
+    color: var(--color-text);
+    font-family: var(--font-primary);
     overflow: hidden;
-    margin: 0%;
-    background-color: rgb(53, 51, 51);
+    margin: 0;
+    background-color: rgb(68, 66, 66);
 }
 
 header{
     background-color: black;
     display: block;
-    width: 100%;
-    height: 130px;
-    font-family: font-family: 'Open Sans', sans-serif;
 }
 
-.título{
-    width: 100%;
+.título-header{
     text-align: center;
     font-size: 36px;
     font-weight: 600;
     margin: 10px;
-    margin-top: 25px;
     letter-spacing: -1px;
+    color: beige;
 }
 
-h1{
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-
-.botones-del-contenedor{
+.botones-header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .botón{
-    background-color: black;
-    color: white;
-    border: 0;
     height: 36px;
     display: flex;
     justify-content: center;
@@ -55,46 +39,37 @@ h1{
     transition: background-color 0.2s;
     font-size: 14px;
     cursor: pointer;
+    background-color: black;
+    border: none;
+    color: beige;
 }
 
-.aside{
-    background-color: var(--color-aside);
-    width: 260px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: fixed;
-    padding: 34;
-    overflow: auto;
-    color: var(--color);
-}
 
-.contenedor-memes{
+
+.caja-memes{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 80vh;
-    width: 60%;
+    width: 40%;
     margin: auto;
     background-color: black;
 }
 
 .imagen-meme{
-    height: 70%;
+    height: 60%;
     background-color: black;
 }
 .contenedor-texto{
-    height: 15%;
+    height: 20%;
     background-color: white;
 }
 
 .texto{
-    display: flex;
     color: black;
-    font-size: 2em;
-    font-weight: bold;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Verdana;
 }
