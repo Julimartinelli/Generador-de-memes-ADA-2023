@@ -18,7 +18,7 @@
                     <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
                 <button class="botón botón-texto" id="texto-botón"><i class="fas fa-font button-icon-text" aria-hidden="true">Texto</button>
                 <button class="botón button-text botón-modo botón-modo-oscuro" id="dark-theme-button" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo oscuro</button>
-                <button class="botón button-text botón-modo botón-modo-claro" id="light-theme-button" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo claro</button>
+                <button class="hidden botón button-text botón-modo botón-modo-claro" id="light-theme-button" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo claro</button>
             </div>
         </header>
 
@@ -28,15 +28,17 @@
                     <div class="contenedor-texto top-text">
                         <p class="texto">TOP TEXT</p>
                     </div>
-                    <div class="imagen-meme"></div>
+                    <div class="imagen-meme" id="imagen-meme"></div>
                     <div class="contenedor-texto bottom-text">
                         <p class="texto">BOTTOM TEXT</p>
                     </div>
                 </div>
             </main>
 
-            <aside class="aside-hidden" id="aside-texto">TEXTO</aside>
-            <aside class="aside" id="aside-imagen">IMAGEN</aside>
+            <aside class="aside aside-hidden" id="aside-texto">TEXTO</aside>
+            <aside class="aside" id="aside-imagen">IMAGEN
+                <input type="text" id="url-imagen"/>
+            </aside>
         </div>
     </body>
 </html>
