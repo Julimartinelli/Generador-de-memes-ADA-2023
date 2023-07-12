@@ -90,3 +90,18 @@ header{
     font-family: Verdana;
     align-items: center;
 }
+
+.controles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    font-family: Verdana;
+    font-weight: 300;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.barra-de-control{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
