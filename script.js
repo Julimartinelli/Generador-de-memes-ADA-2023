@@ -23,8 +23,7 @@
 
 
 //IMAGEN
-const urlInput = document.getElementById('imagen-meme');
-console.log(urlInput)
+const urlInput = document.getElementById('url-imagen');
 const imagenMeme = document.getElementById('imagen-meme');
 
 imagenMeme.addEventListener('input', (e)=> changeBackground(e))

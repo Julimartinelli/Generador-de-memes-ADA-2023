@@ -36,9 +36,64 @@
             </main>
 
             <aside class="aside aside-hidden" id="aside-texto">TEXTO</aside>
+            
+            <section class="panel-control-imagen">
             <aside class="aside" id="aside-imagen">IMAGEN
                 <input type="text" id="url-imagen"/>
+                <div class="panel-control-color">
+                <h3>FONDO</h3>
+                <input aria-label="Color de fondo del meme" type="color" id="color-foto-meme" value="#FFFFFF">
+                <span id="color-foto-meme" aria-hidden="true">#FFFFFF</span>
+            </div>
+            <div class="controles">
+                <h2>FILTROS</h2>
+                <div class="barra-de-control">
+                <label for="barra-brillo">BRILLO</label>
+                <input type="range" id="barra-brillo" min="0" max="1" value="1" step="0.1">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-opacidad">OPACIDAD</label>
+                    <input type="range" id="barra-opacidad" min="0" max="1" value="1" step="0.1">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-contraste">CONTRASTE</label>
+                    <input type="range" id="barra-contraste" min="100" max="1000" value="100">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-desenfoque">DESENFOQUE</label>
+                    <input type="range" id="barra-desenfoque" min="0" max="10" value="0" step="0.1">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-escala-grises">ESCALA DE GRISES</label>
+                    <input type="range" id="barra-escala-grises" min="0" max="100" value="0">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-sepia">SEPIA</label>
+                    <input type="range" id="barra-sepia" min="0" max="100" value="0">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-hue">HUE</label>
+                    <input type="range" id="barra-hue" min="0" max="360" value="0">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-saturado">SATURADO</label>
+                    <input type="range" id="barra-saturado" min="100" max="1000" value="100" step="10">
+                </div>
+                <div class="barra-de-control">
+                    <label for="barra-negativo">NEGATIVO</label>
+                    <input type="range" id="barra-negativo" min="0" max="1" value="0" step="0.1">
+                </div>
+            </div>
+            <button class="botón botón-restablecer" id="boton-restablecer-filtros">Restablecer filtros</button>
+            </section>
             </aside>
         </div>
+
+
+
+
+
+
+        <script type="javascript" src="script.js"></script>
     </body>
 </html>
