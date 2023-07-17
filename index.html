@@ -14,11 +14,11 @@
         <header>
             <h1 class="título-header">GENERADOR DE MEMES</h1>
             <div class="botones-header">
-                <button class="botón botón-imagen" id="img-botón">
-                    <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
-                <button class="botón botón-texto" id="texto-botón"><i class="fas fa-font button-icon-text" aria-hidden="true">Texto</button>
-                <button class="botón butón-texto botón-modo botón-modo-oscuro" id="botón-modo-oscuro" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo oscuro</button>
-                <button class="hidden botón botón-texto botón-modo botón-modo-claro" id="btón-modo-claro" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo claro</button>
+                <button class="boton boton-imagen" id="imagen-boton">
+                <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
+                <button class="boton boton-texto" id="texto-boton"><i class="fas fa-font button-icon-text" aria-hidden="true">Texto</button>
+                <button class="boton boton-modo-oscuro" id="boton-modo-oscuro" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo oscuro</button>
+                <button class="hidden boton boton-modo-claro" id="botón-modo-claro" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo claro</button>
             </div>
         </header>
 
@@ -35,10 +35,103 @@
                 </div>
             </main>
 
-            <aside class="aside aside-hidden" id="aside-texto">TEXTO</aside>
+            <!--ASIDE TEXTO-->
+            <aside class="panel" id="panel">
+                <section class="aside-texto hidden" id="aside-texto">
+                    <h2 class="panel-título">TEXTO</h2>
+                <h3 class="texto-superior">SUPERIOR</h3>
+                <textarea aria-label="Texto superior" class="input-texto-superior" id="input-texto-superior">TOP TEXT</textarea>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox-texto-superior">
+                    <label for="sin-texto-checkbox">Sin texto superior</label>
+                </div>
+                <h3 class="texto-superior">INFERIOR</h3>
+                <textarea aria-label="Texto inferior" class="input-texto-inferior" id="input-texto-inferior">BOTTOM TEXT</textarea>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox-texto-inferior">
+                    <label for="sin-texto-checkbox">Sin texto superior</label>
+                    </div>
+                    <div class="panel-control">
+                        <h3 class="panel-control-title">FUENTE</h3>
+                        <select name="Familia de fuente" id="text-font-select" class="panel-control-input" aria-label="Familia de fuente">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact" selected="">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select>
+                        <div class="flex-container">
+                            <input type="number" name="Tamaño fuente" aria-label="Tamaño fuente" class="panel-control-input" id="tamaño-texto-input" min="12" value="40">
+                            <div class="botones-contenedor">
+                            <button class="botón button-default" id="text-left-align-button" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                            <button class="botón button-default" id="text-center-align-button" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                            <button class="botón button-default" id="text-right-align-button" aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="botones-contenedor">
+                            <button class="button button-default" id="text-left-align-button" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                            <button class="button button-default" id="text-center-align-button" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                            <button class="button button-default" id="text-right-align-button" aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="panel-control">
+                        <div class="panel-color">
+                            <div class="panel-control panel-color">
+                            <h3 class="panel-título">COLOR</h3>
+                            <div class="panel-control-color">
+                            <input name="Color de texto" type="color" id="text-color-input" value="#000000" aria-label="Color de texto">
+                            <span id="color-texto" aria-hidden="true">#000000</span>
+                            </div>
+                        </div>
+                        <div class="panel-control panel-color">
+                            <h3 class="panel-título">FONDO</h3>
+                            <div class="panel-color">
+                            <input name="Color de fondo de texto" type="color" id="text-background-color-input" value="#FFFFFF" aria-label="Color de fondo de texto">
+                            <span id="text-background-color" aria-hidden="true">#FFFFFF</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="flex-container panel-control-checkbox">
+                        <input type="checkbox" id="sin-texto-checkbox"><label for="text-no-background-checkbox">Fondo transparente</label>
+                        </div>
+                    </div>
+                    <div class="panel-control">
+                        <h3 class="panel-título">CONTORNO</h3>
+                        <div class="buttons-container">
+                        <button class="botón button-default" id="botón-ninguni">Ninguno</button>
+                        <button class="botón button-default" id="botón-claro">Claro</button>
+                        <button class="botón button-default" id="botón-oscuro">Oscuro</button>
+                        </div>
+                    </div>
+                    <div class="panel-control">
+                        <h3 class="panel-título">ESPACIADO</h3>
+                        <input type="number" id="padding-input" class="panel-control-input" aria-label="Espaciado" min="10" max="50" value="35">
+                    </div>
+                    <div class="panel-control">
+                        <h3 class="panel-título">ESPACIADO</h3>
+                        <input type="number" id="padding-input" class="panel-control-input" aria-label="Espaciado" min="10" max="50" value="35">
+                    </div>
+                    <div class="panel-control">
+                        <h3 class="panel-título">INTERLINEADO</h3>
+                        <select id="line-height-input" class="panel-control-input" aria-label="Interlineado">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2" selected="">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                        </select>
+                    </div>
+                </section>
             
-            <section class="panel-control-imagen">
-            <aside class="aside" id="aside-imagen">IMAGEN
+
+            <!--ASIDE IMAGEN-->
+            <section class="panel-control">
+            <aside class="aside hidden" id="aside-imagen">IMAGEN
                 <input type="text" id="url-input"/>
                 <div class="panel-control-color">
                 <h3>FONDO</h3>
@@ -86,7 +179,7 @@
             </div>
             <button class="botón botón-restablecer" id="boton-restablecer-filtros">Restablecer filtros</button>
             </section>
-        </div>
+        </aside>
 
 
 

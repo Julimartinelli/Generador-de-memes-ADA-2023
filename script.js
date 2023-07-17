@@ -1,10 +1,3 @@
-//MODOS CLARO / OSCURO
-changeMode = () => {
-    asideTexto.classList.toggle('modo-oscuro');
-    contenedorPrincipalClaro.classList.toggle('contenedor-principal-claro');
-    asideImagen.classList.toggle('aside-imagen')
-}
-
 //BOTONES ASIDE
 const botónTexto = document.getElementById("botón-texto");
 const botónImagen = document.getElementById("botón-imagen")
@@ -26,6 +19,42 @@ const cambioFondoMeme = () => {
 
 colorPicker.addEventListener('input', () => cambioFondoMeme)
 
+//PANELES
+
+const botonImagen = document.getElementById('imagen-boton');
+const botonTexto = document.getElementById('texto-boton');
+
+const asideImagen = document.getElementById('aside-imagen');
+const asideTexto = document.getElementById('aside-texto')
+
+botonImagen.addEventListener('click', ()=> hideAsideImagen);
+botonTexto.addEventListener('click', ()=> hideAsideTexto);
+
+const hideAsideImagen = () => {
+asideTexto.classList.add('hidden');
+asideImagen.classList.remove('hidden');
+}
+
+const hideAsideTexto = () => {
+asideImagen.classList.add('hidden');
+asideTexto.classList.remove('hidden');
+}
+
+const ocultarPanel = () => {
+$('panel').classList.add('oculto')
+}
+const mostrarPanel = () => {
+$('panel').classList.remove('oculto')
+}
+const mostrarPanelImagen = () => {
+$(`aside-texto`).classList.add('oculto')
+$(`aside-imagen`).classList.remove('oculto')
+}
+const mostrarPanelTexto = () => {
+$(`aside-imagen`).classList.add('oculto')
+$(`aside-texto`).classList.remove('oculto')
+}
+
 
 //FILTROS
 const barraBrillo = document.getElementById('barra-brillo');
@@ -41,9 +70,8 @@ const barraSaturado = document.getElementById('barra-saturado');
 const barraNegativo = document.getElementById('barra-negativo');
 
 const filtros = (e) => { 
-    console.log(e)
-    imagenMeme.style.filter = `brightness(${barraBrillo.value}) opacity(${barraOpacidad.value}) blur(${barraDesenfoque.value}px) contrast(${barraContraste.value}%) grayscale(${barraEscalaGrises.value}%) hue-rotate(${barraHue.value}deg) sepia(${barraSepia.value}%) saturate(${barraSaturado.value}%) invert(${barraNegativo.value})`}
-
+console.log(e)
+imagenMeme.style.filter = `brightness(${barraBrillo.value}) opacity(${barraOpacidad.value}) blur(${barraDesenfoque.value}px) contrast(${barraContraste.value}%) grayscale(${barraEscalaGrises.value}%) hue-rotate(${barraHue.value}deg) sepia(${barraSepia.value}%) saturate(${barraSaturado.value}%) invert(${barraNegativo.value})`}
 
 barraBrillo.addEventListener('input', (e)=> filtros(e));
 barraOpacidad.addEventListener('input', (e)=> filtros(e));
@@ -55,8 +83,20 @@ barraHue.addEventListener('input', (e)=> filtros (e));
 barraSaturado.addEventListener('input', (e)=> filtros (e));
 barraNegativo.addEventListener('input', (e)=> filtros(e));
 
+const reestrablecerFiltros = (e) => {
+$('brightness-slider').value = 1
+$('opacity-slider').value = 1
+$('blur-slider').value = 0
+$('contrast-slider').value = 100
+$('grayscale-slider').value = 0
+$('hue-slider').value = 0
+$('sepia-slider').value = 0
+$('saturate-slider').value = 100
+$('invert-slider').value = 0
+filtros(e)
+}
 
-//IMAGEN
+//IMAGEN MEME
 const urlInput = document.getElementById('url-input');
 const imagenMeme = document.getElementById('imagen-meme');
 console.log(urlInput)
@@ -69,3 +109,21 @@ const changeBackground = (e) =>{
     imagenMeme.style.backgroundRepeat = 'no-repeat'
     imagenMeme.style.backgroundPosition = 'center'
 }
+
+const textoSuperior = document.getElementById('texto-superior');
+const txtoInferior = document.getElementById('texto-inferior')
+
+
+//MODOS
+const cambiarModoOscuro = () => {
+body.classList.remove('modo-oscuro');
+body.classList.add('modo-claro');
+}
+
+const cambiarModoClaro = () => {
+    body.classList.remove('modo-claro');
+    body.classList.add('modo-oscuro');
+    }
+
+
+

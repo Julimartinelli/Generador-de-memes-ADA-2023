@@ -8,9 +8,6 @@ body{
     background-color: rgb(43, 42, 42);
 }
 
-.contenedor-principal{
-
-}
 header{
     background-color: black;
     display: block;
@@ -32,7 +29,7 @@ header{
     margin-bottom: 5px;
 }
 
-.botón{
+.boton{
     height: 36px;
     display: flex;
     justify-content: center;
@@ -75,6 +72,9 @@ header{
     font-family: Verdana;
 }
 
+.hidden{
+    display: none;
+}
 .aside{
     width: 230px;
     height: 100%;
@@ -134,9 +134,9 @@ header{
 }
 
 
-.modo-oscuro{
-    background-color: black;
-    color: white;
+.modo-claro{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .contenedor-principal-claro{
