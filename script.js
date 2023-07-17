@@ -1,11 +1,30 @@
+//MODOS CLARO / OSCURO
+changeMode = () => {
+    asideTexto.classList.toggle('modo-oscuro');
+    contenedorPrincipalClaro.classList.toggle('contenedor-principal-claro');
+    asideImagen.classList.toggle('aside-imagen')
+}
+
+//BOTONES ASIDE
+const botónTexto = document.getElementById("botón-texto");
+const botónImagen = document.getElementById("botón-imagen")
+const contenedorPrincipalClaro = document.getElementById("contenedor-principal-claro")
+
+botónTexto.addEventListener("click", () => hideasideTexto)
+botónImagen.addEventListener("click", () => hideasideImagen)
 
 
+//INPUT COLOR
+const colorPicker = document.getElementById("color-picker");
+const colorMeme = document.getElementById("color-meme");
+console.log(colorMeme)
 
+const cambioFondoMeme = () => {
+    let selecciónColor = colorPicker.value;
+    colorMeme.innerHTML = `${colorPicker.value}`
+}
 
-
-
-
-
+colorPicker.addEventListener('input', () => cambioFondoMeme)
 
 
 //FILTROS
@@ -26,20 +45,10 @@ const filtros = (e) => {
 barraBrillo.addEventListener('input', (e)=> filtros(e))
 
 
-
-
-
-
-
-
-
-
-
-
 //IMAGEN
 const urlInput = document.getElementById('url-input');
 const imagenMeme = document.getElementById('imagen-meme');
-
+console.log(urlInput)
 urlInput.addEventListener('input', (e)=> changeBackground(e))
 
 const changeBackground = (e) =>{

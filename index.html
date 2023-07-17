@@ -14,7 +14,7 @@
         <header>
             <h1 class="título-header">GENERADOR DE MEMES</h1>
             <div class="botones-header">
-                <button class="botón botón-texto" id="img-botón">
+                <button class="botón botón-imagen" id="img-botón">
                     <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
                 <button class="botón botón-texto" id="texto-botón"><i class="fas fa-font button-icon-text" aria-hidden="true">Texto</button>
                 <button class="botón butón-texto botón-modo botón-modo-oscuro" id="botón-modo-oscuro" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo oscuro</button>
@@ -23,7 +23,7 @@
         </header>
 
         <div class="contenedor-general-memes">
-            <main class="contenedor-memes">
+            <main class="contenedor-principal" id="contenedor-principal">
                 <div class="caja-memes">
                     <div class="contenedor-texto top-text">
                         <p class="texto">TOP TEXT</p>
@@ -42,8 +42,8 @@
                 <input type="text" id="url-input"/>
                 <div class="panel-control-color">
                 <h3>FONDO</h3>
-                <input aria-label="Color de fondo del meme" type="color" id="color-foto-meme" value="#FFFFFF">
-                <span id="color-foto-meme" aria-hidden="true">#FFFFFF</span>
+                <input type="color" class="boton-color" id="color-picker"/>
+                <span id="color-meme" aria-hidden="true">#FFFFFF</span>
             </div>
             <div class="controles">
                 <h2>FILTROS</h2>
@@ -86,7 +86,6 @@
             </div>
             <button class="botón botón-restablecer" id="boton-restablecer-filtros">Restablecer filtros</button>
             </section>
-            </aside>
         </div>
 
 

@@ -8,6 +8,9 @@ body{
     background-color: rgb(43, 42, 42);
 }
 
+.contenedor-principal{
+
+}
 header{
     background-color: black;
     display: block;
@@ -91,6 +94,30 @@ header{
     align-items: center;
 }
 
+.panel-control-color{
+    border: 0;
+    color: var(--color-text);
+    background-color: transparent;
+    display: block;
+    outline: 0;
+    font-size: 15px;
+}
+
+.boton-color{
+    width: 30%;
+    height: 25%;
+    background-color: transparent;
+    border: none;
+}
+.boton-color::-webkit-color-swatch{
+    border-radius: 100%;
+    border: none;
+}
+
+.boton-color::-webkit-color-swatch-wrapper{
+    padding: 0;
+    background-color: transparent;
+}
 .controles{
     display: flex;
     flex-wrap: wrap;
@@ -104,4 +131,14 @@ header{
 .barra-de-control{
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+
+.modo-oscuro{
+    background-color: black;
+    color: white;
+}
+
+.contenedor-principal-claro{
+    background-color: white;
 }
