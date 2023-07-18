@@ -133,6 +133,7 @@ const descargaMeme = () => {
     domtoimage.toBlob(meme).then(function (blob) {
         window.saveAs(blob, mi-meme-png);
     });
+    console.log(descargaMeme)
 };
 
 
