@@ -9,16 +9,26 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
             rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+            <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+            integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
     </head>
     <body class="modo-oscuro">
         <header>
             <h1 class="título-header">GENERADOR DE MEMES</h1>
             <div class="botones-header">
                 <button class="boton boton-imagen" id="imagen-boton">
-                <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
-                <button class="boton boton-texto" id="texto-boton"><i class="fas fa-font button-icon-text" aria-hidden="true">Texto</button>
-                <button class="boton boton-modo-oscuro" id="boton-modo-oscuro" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo oscuro</button>
-                <button class="hidden boton boton-modo-claro" id="botón-modo-claro" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb button-icon-text" aria-hidden="true"></i>Modo claro</button>
+                <i class="fas fa-file-image icono-boton" aria-hidden="true"></i>Imagen</button>
+                <button class="boton boton-texto" id="texto-boton"><i class="fas fa-font icono-boton" aria-hidden="true">Texto</button>
+                <button class="boton boton-modo-oscuro" id="boton-modo-oscuro" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb icono-boton" aria-hidden="true"></i>Modo oscuro</button>
+                <button class="hidden boton boton-modo-claro" id="botón-modo-claro" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb icono-boton" aria-hidden="true"></i>Modo claro</button>
             </div>
         </header>
 
@@ -34,19 +44,21 @@
                     </div>
                 </div>
             </main>
-
+<div class="contenedor-boton-descarga">
+    <button class="boton boton-descarga" id="boton-descarga">DESCARGA</button>
+</div>
             <!--ASIDE TEXTO-->
             <aside class="panel" id="panel">
-                <section class="aside-texto hidden" id="aside-texto">
+                <section class="aside" id="aside-texto">
                     <h2 class="panel-título">TEXTO</h2>
                 <h3 class="texto-superior">SUPERIOR</h3>
-                <textarea aria-label="Texto superior" class="input-texto-superior" id="input-texto-superior">TOP TEXT</textarea>
+                <textarea aria-label="Texto superior" class="input-texto" id="input-texto-superior" style="width: 140px; height: 15px;">TOP TEXT</textarea>
                 <div class="checkbox">
                     <input type="checkbox" id="checkbox-texto-superior">
                     <label for="sin-texto-checkbox">Sin texto superior</label>
                 </div>
                 <h3 class="texto-superior">INFERIOR</h3>
-                <textarea aria-label="Texto inferior" class="input-texto-inferior" id="input-texto-inferior">BOTTOM TEXT</textarea>
+                <textarea aria-label="Texto inferior" class="input-texto" id="input-texto-inferior">BOTTOM TEXT</textarea>
                 <div class="checkbox">
                     <input type="checkbox" id="checkbox-texto-inferior">
                     <label for="sin-texto-checkbox">Sin texto superior</label>
@@ -130,7 +142,7 @@
             
 
             <!--ASIDE IMAGEN-->
-            <section class="panel-control">
+            <section class="panel-control hidden" id="aside-imagen">
             <aside class="aside hidden" id="aside-imagen">IMAGEN
                 <input type="text" id="url-input"/>
                 <div class="panel-control-color">

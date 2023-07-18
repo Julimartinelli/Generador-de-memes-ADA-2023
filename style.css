@@ -29,6 +29,11 @@ header{
     margin-bottom: 5px;
 }
 
+.icono-boton{
+    margin-right: 5px;
+    display: block;
+}
+
 .boton{
     height: 36px;
     display: flex;
@@ -75,6 +80,14 @@ header{
 .hidden{
     display: none;
 }
+
+.contenedor-boton-descarga{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
 .aside{
     width: 230px;
     height: 100%;
@@ -88,12 +101,19 @@ header{
     top: 0;
     right: 0;
     color: beige;
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 500;
     font-family: Verdana;
     align-items: center;
 }
 
+.input-texto{
+    width: 70%;
+    height: 100px;
+    transition: background-color 0.2s;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
 .panel-control-color{
     border: 0;
     color: var(--color-text);
@@ -132,7 +152,6 @@ header{
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
 
 .modo-claro{
     background-color: rgb(255, 255, 255);

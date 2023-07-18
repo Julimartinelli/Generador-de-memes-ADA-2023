@@ -1,33 +1,13 @@
-//BOTONES ASIDE
-const botónTexto = document.getElementById("botón-texto");
-const botónImagen = document.getElementById("botón-imagen")
-const contenedorPrincipalClaro = document.getElementById("contenedor-principal-claro");
-
-//botónTexto.addEventListener("click", (e) => hideAsideTexto)
-//botónImagen.addEventListener("click", (e) => hideAsideImagen)
-
-
-//INPUT COLOR
-const colorPicker = document.getElementById("color-picker");
-const colorMeme = document.getElementById("color-meme");
-console.log(colorMeme)
-
-const cambioFondoMeme = () => {
-    let selecciónColor = colorPicker.value;
-    colorMeme.innerHTML = `${colorPicker.value}`
-}
-
-colorPicker.addEventListener('input', () => cambioFondoMeme)
-
 //PANELES
-
 const botonImagen = document.getElementById('imagen-boton');
+console.log(botonImagen)
 const botonTexto = document.getElementById('texto-boton');
 
 const asideImagen = document.getElementById('aside-imagen');
 const asideTexto = document.getElementById('aside-texto')
 
 botonImagen.addEventListener('click', ()=> hideAsideImagen);
+console.log(asideImagen)
 botonTexto.addEventListener('click', ()=> hideAsideTexto);
 
 const hideAsideImagen = () => {
@@ -41,21 +21,21 @@ asideTexto.classList.remove('hidden');
 }
 
 const ocultarPanel = () => {
-$('panel').classList.add('oculto')
+$('panel').classList.add('hidden')
 }
 const mostrarPanel = () => {
-$('panel').classList.remove('oculto')
+$('panel').classList.remove('hidden')
 }
 const mostrarPanelImagen = () => {
-$(`aside-texto`).classList.add('oculto')
-$(`aside-imagen`).classList.remove('oculto')
+$(`aside-texto`).classList.add('hidden')
+$(`aside-imagen`).classList.remove('hidden')
 }
 const mostrarPanelTexto = () => {
-$(`aside-imagen`).classList.add('oculto')
-$(`aside-texto`).classList.remove('oculto')
+$(`aside-imagen`).classList.add('hidden')
+$(`aside-texto`).classList.remove('hidden')
 }
 
-
+//CAMBIOS ASIDE IMAGEN
 //FILTROS
 const barraBrillo = document.getElementById('barra-brillo');
 console.log(barraBrillo)
@@ -112,6 +92,48 @@ const changeBackground = (e) =>{
 
 const textoSuperior = document.getElementById('texto-superior');
 const txtoInferior = document.getElementById('texto-inferior')
+
+//INPUT COLOR
+const colorMeme = document.getElementById("color-meme");
+const colorPicker = document.getElementById("color-picker");
+
+const cambiarFondoMeme = () => {
+    let colorSeleccionado = colorPicker.value;
+    colorMeme.innerHTML = `${colorSeleccionado}`;
+}
+
+colorPicker.addEventListener('input', () => cambiarFondoMeme());
+
+//CAMBIOS ASIDE TEXTO
+const inputTextoSuperior = document.getElementById("input-texto-superior")
+console.log(inputTextoSuperior)
+inputTextoSuperior.addEventListener('input', () => cambiarTextoSuperior)
+
+const cambiarTextoSuperior = () => {
+    console.log(cambiarTextoSuperior)
+    let textoSeleccionado = inputTextoSuperior.value
+    inputTextoSuperior.innerHTML.replace = `${textoSeleccionado}`
+}
+
+const inputTextoInferior = document.getElementById("input-texto-inferior")
+inputTextoSuperior.addEventListener('input', () => cambiarTextoSuperior)
+
+const cambiarTextoInferior = () => {
+    let textoSeleccionado = inputTextoSuperior.value
+    inputTextoInferior.innerHTML.replace = `${textoSeleccionado}`
+}
+
+//BOTÓN DESCARGA
+const botonDescarga = document.getElementById("boton-descarga")
+const meme = document.getElementById("caja-meme");
+
+botonDescarga.addEventListener("click", () => descargaMeme());
+
+const descargaMeme = () => {
+    domtoimage.toBlob(meme).then(function (blob) {
+        window.saveAs(blob, mi-meme-png);
+    });
+};
 
 
 //MODOS
