@@ -9,11 +9,13 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
             rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/9f1b01a0bb.js" crossorigin="anonymous"></script>
             <script
             src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
             integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
             crossorigin="anonymous"
-            referrerpolicy="no-referrer"></script>
+            referrerpolicy="no-referrer">
+            </script>
     <script 
     src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
     integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
@@ -22,17 +24,31 @@
     </head>
     <body class="modo-oscuro">
         <header>
-            <!--HEADER-->
+
+            <!--INICIO HEADER-->
             <h1 class="título-header">GENERADOR DE MEMES</h1>
             <div class="botones-header">
-                <button class="boton boton-imagen" id="imagen-boton">
-                <i class="fas fa-file-image icono-boton" aria-hidden="true"></i>Imagen</button>
-                <button class="boton boton-texto" id="texto-boton"><i class="fas fa-font icono-boton" aria-hidden="true">Texto</button>
-                <button class="boton boton-modo-oscuro" id="boton-modo-oscuro" aria-label="Cambiar a modo oscuro"><i class="far fa-lightbulb icono-boton" aria-hidden="true"></i>Modo oscuro</button>
-                <button class="hidden boton boton-modo-claro" id="botón-modo-claro" aria-label="Cambiar a modo claro"> <i class="fas fa-lightbulb icono-boton" aria-hidden="true"></i>Modo claro</button>
+                <button class="boton boton-imagen" id="imagen-boton"> 
+                    <i class="fas fa-file-image icono-boton" aria-hidden="true"></i>
+                    Imagen
+                </button>
+                <button class="boton boton-texto" id="texto-boton">
+                    <i class="fas fa-font icono-boton" aria-hidden="true">
+                    Texto
+                </button>
+                <button class="boton boton-modo-oscuro" id="boton-modo-oscuro" aria-label="Cambiar a modo oscuro">
+                    <i class="far fa-lightbulb icono-boton" aria-hidden="true"></i>
+                    Modo oscuro
+                </button>
+                <button class="hidden boton boton-modo-claro" id="botón-modo-claro" aria-label="Cambiar a modo claro"> 
+                    <i class="fas fa-lightbulb icono-boton" aria-hidden="true"></i>
+                    Modo claro
+                </button>
             </div>
         </header>
-        <!--CAJA MEME-->
+        <!--FIN HEADER-->
+
+        <!--INICIO CAJA MEME-->
         <div class="contenedor-general-memes">
             <main class="contenedor-principal" id="contenedor-principal">
                 <div class="caja-memes">
@@ -45,13 +61,15 @@
                     </div>
                 </div>
             </main>
-<div class="contenedor-boton-descarga">
-    <button class="boton boton-descarga" id="boton-descarga">DESCARGA</button>
-</div>
-            <!--ASIDE TEXTO-->
-            <aside class="panel" id="panel">
-                <section class="aside" id="aside-texto">
-                    <h2 class="panel-título">TEXTO</h2>
+            <div class="contenedor-boton-descarga">
+                <button class="boton boton-descarga" id="boton-descarga">DESCARGA</button>
+            </div>
+        <!--FIN CAJA MEME-->
+
+            <!--INICIO ASIDE TEXTO-->
+        <aside class="panel" id="panel">
+            <section class="aside" id="aside-texto">
+                <h2 class="panel-título">TEXTO</h2>
                 <h3 class="texto-superior">SUPERIOR</h3>
                 <textarea aria-label="Texto superior" class="input-texto" id="input-texto-superior" style="width: 140px; height: 15px;">TOP TEXT</textarea>
                 <div class="checkbox">
@@ -140,15 +158,16 @@
                         </select>
                     </div>
                 </section>
-            <!--ASIDE IMAGEN-->
-            <section class="panel-control hidden" id="aside-imagen">
-            <aside class="aside hidden" id="aside-imagen">IMAGEN
+            <!--FIN ASIDE TEXTO-->
+
+            <!--INICIO ASIDE IMAGEN-->
+            <section class="panel-control hidden" id="aside-imagen"> IMAGEN
                 <input type="text" id="url-input"/>
                 <div class="panel-control-color">
-                <h3>FONDO</h3>
-                <input type="color" class="boton-color" id="color-picker"/>
-                <span id="color-meme" aria-hidden="true">#FFFFFF</span>
-            </div>
+                    <h3>FONDO</h3>
+                    <input type="color" class="boton-color" id="color-picker"/>
+                    <span id="color-meme" aria-hidden="true">#FFFFFF</span>
+                </div>
             <div class="controles">
                 <h2>FILTROS</h2>
                 <div class="barra-de-control">
@@ -189,8 +208,9 @@
                 </div>
             </div>
             <button class="botón botón-restablecer" id="boton-restablecer-filtros">Restablecer filtros</button>
+            <!--FIN ASIDE IMAGEN-->
             </section>
-        </aside>
+            </aside>
 
 
 

@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     color: var(--color-text);
@@ -8,12 +8,12 @@ body{
     background-color: rgb(43, 42, 42);
 }
 
-header{
+header {
     background-color: black;
     display: block;
 }
 
-.título-header{
+.título-header {
     text-align: center;
     font-size: 36px;
     font-weight: 600;
@@ -22,21 +22,22 @@ header{
     color: beige;
 }
 
-.botones-header{
+.botones-header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 5px;
+    align-items: center;
 }
 
-.icono-boton{
+.icono-boton {
     margin-right: 5px;
     display: block;
 }
 
-.boton{
-    height: 36px;
+.boton {
     display: flex;
+    height: 36px;
     justify-content: center;
     align-items: center;
     padding: 0 10px;
@@ -49,7 +50,7 @@ header{
     color: beige;
 }
 
-.caja-memes{
+.caja-memes {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,16 +60,16 @@ header{
     background-color: black;
 }
 
-.imagen-meme{
+.imagen-meme {
     height: 60%;
     background-color: black;
 }
-.contenedor-texto{
+.contenedor-texto {
     height: 20%;
     background-color: white;
 }
 
-.texto{
+.texto {
     color: black;
     text-align: center;
     justify-content: center;
@@ -77,18 +78,18 @@ header{
     font-family: Verdana;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.contenedor-boton-descarga{
+.contenedor-boton-descarga {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
 }
 
-.aside{
+.aside {
     width: 230px;
     height: 100%;
     display: flex;
@@ -107,14 +108,14 @@ header{
     align-items: center;
 }
 
-.input-texto{
+.input-texto {
     width: 70%;
     height: 100px;
     transition: background-color 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
 }
-.panel-control-color{
+.panel-control-color {
     border: 0;
     color: var(--color-text);
     background-color: transparent;
@@ -123,22 +124,22 @@ header{
     font-size: 15px;
 }
 
-.boton-color{
+.boton-color {
     width: 30%;
     height: 25%;
     background-color: transparent;
     border: none;
 }
-.boton-color::-webkit-color-swatch{
+.boton-color::-webkit-color-swatch {
     border-radius: 100%;
     border: none;
 }
 
-.boton-color::-webkit-color-swatch-wrapper{
+.boton-color::-webkit-color-swatch-wrapper {
     padding: 0;
     background-color: transparent;
 }
-.controles{
+.controles {
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
@@ -148,16 +149,16 @@ header{
     justify-content: space-between;
 }
 
-.barra-de-control{
+.barra-de-control {
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.modo-claro{
+.modo-claro {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
 
-.contenedor-principal-claro{
+.contenedor-principal-claro {
     background-color: white;
 }
