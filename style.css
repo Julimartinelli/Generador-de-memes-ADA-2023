@@ -20,6 +20,8 @@ header {
     margin: 10px;
     letter-spacing: -1px;
     color: beige;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
 }
 
 .botones-header {
@@ -48,8 +50,13 @@ header {
     background-color: black;
     border: none;
     color: beige;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
+.contenedor-principal {
+    margin-top: 0;
+}
 .caja-memes {
     display: flex;
     flex-direction: column;
@@ -74,8 +81,8 @@ header {
     text-align: center;
     justify-content: center;
     font-size: 40px;
-    font-weight: 800;
-    font-family: Verdana;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .hidden {
@@ -87,6 +94,12 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    margin-top: 3px;
+}
+
+.boton-descarga{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .aside {
@@ -95,6 +108,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     background-color: rgb(32, 32, 32);
     padding: 30px 15px;
     overflow: auto;
@@ -102,9 +116,9 @@ header {
     top: 0;
     right: 0;
     color: beige;
-    font-size: 13px;
-    font-weight: 500;
-    font-family: Verdana;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     align-items: center;
 }
 

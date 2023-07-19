@@ -106,22 +106,33 @@ colorPicker.addEventListener("input", () => cambiarFondoMeme());
 
 //CAMBIOS ASIDE TEXTO
 const inputTextoSuperior = document.getElementById("input-texto-superior");
-console.log(inputTextoSuperior);
-inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior);
+const contenedorTexto = document.getElementById("contenedor-texto");
+
+inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior());
 
 const cambiarTextoSuperior = () => {
-    console.log(cambiarTextoSuperior);
-    let textoSeleccionado = inputTextoSuperior.value;
-    inputTextoSuperior.innerHTML.replace = `${textoSeleccionado}`;
+    cambiarTextoSuperior.innerText = inputTextoSuperior.value;
+    cambiarTextoSuperior.innerText = `${inputTextoSuperior}`;
 };
 
 const inputTextoInferior = document.getElementById("input-texto-inferior");
-inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior);
+
+inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior());
 
 const cambiarTextoInferior = () => {
-    let textoSeleccionado = inputTextoSuperior.value;
-    inputTextoInferior.innerHTML.replace = `${textoSeleccionado}`;
+    cambiarTextoSuperior.innerText = inputTextoSuperior.value;
+    cambiarTextoSuperior.innerText = `${inputTextoInferior}`;
 };
+
+//selector de fuentes
+const selectorFuente = document.getElementById("selector-fuente");
+
+const cambioFuente = () => {
+    topText.style.fontFamily = `${selectorFuente.value}`;
+    bottomText.style.fontFamily = `${selectorFuente.value}`;
+};
+
+fontSelector.addEventListener("change", () => changeFontFamily());
 
 //BOTÓN DESCARGA
 const botonDescarga = document.getElementById("boton-descarga");

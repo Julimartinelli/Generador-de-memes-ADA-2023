@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
-            rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
             <script src="https://kit.fontawesome.com/9f1b01a0bb.js" crossorigin="anonymous"></script>
             <script
@@ -33,7 +33,7 @@
                     Imagen
                 </button>
                 <button class="boton boton-texto" id="texto-boton">
-                    <i class="fas fa-font icono-boton" aria-hidden="true">
+                    <i class="fa-solid fa-font"></i>
                     Texto
                 </button>
                 <button class="boton boton-modo-oscuro" id="boton-modo-oscuro" aria-label="Cambiar a modo oscuro">
@@ -71,10 +71,10 @@
 
             <!--INICIO ASIDE TEXTO-->
         <aside class="panel" id="panel">
-            <section class="aside" id="aside-texto">
+            <section class="aside hidden" id="aside-texto">
                 <h2 class="panel-título">TEXTO</h2>
                 <h3 class="texto-superior">SUPERIOR</h3>
-                <textarea aria-label="Texto superior" class="input-texto" id="input-texto-superior" style="width: 140px; height: 15px;">TOP TEXT</textarea>
+                <textarea aria-label="Texto superior" class="input-texto" id="input-texto-superior">TOP TEXT</textarea>
                 <div class="checkbox">
                     <input type="checkbox" id="checkbox-texto-superior">
                     <label for="sin-texto-checkbox">Sin texto superior</label>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="panel-control">
                         <h3 class="panel-control-title">FUENTE</h3>
-                        <select name="Familia de fuente" id="text-font-select" class="panel-control-input" aria-label="Familia de fuente">
+                        <select name="Familia de fuente" id="selector-fuente" class="panel-control-input" aria-label="Familia de fuente">
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
@@ -105,11 +105,6 @@
                             <button class="botón button-default" id="text-center-align-button" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
                             <button class="botón button-default" id="text-right-align-button" aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
                             </div>
-                        </div>
-                        <div class="botones-contenedor">
-                            <button class="button button-default" id="text-left-align-button" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
-                            <button class="button button-default" id="text-center-align-button" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
-                            <button class="button button-default" id="text-right-align-button" aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     <div class="panel-control">
@@ -146,10 +141,6 @@
                         <input type="number" id="padding-input" class="panel-control-input" aria-label="Espaciado" min="10" max="50" value="35">
                     </div>
                     <div class="panel-control">
-                        <h3 class="panel-título">ESPACIADO</h3>
-                        <input type="number" id="padding-input" class="panel-control-input" aria-label="Espaciado" min="10" max="50" value="35">
-                    </div>
-                    <div class="panel-control">
                         <h3 class="panel-título">INTERLINEADO</h3>
                         <select id="line-height-input" class="panel-control-input" aria-label="Interlineado">
                         <option value="0.8">0.8</option>
@@ -164,7 +155,7 @@
             <!--FIN ASIDE TEXTO-->
 
             <!--INICIO ASIDE IMAGEN-->
-            <section class="panel-control hidden" id="aside-imagen"> IMAGEN
+            <section class="panel-control" id="aside-imagen"> IMAGEN
                 <input type="text" id="url-input"/>
                 <div class="panel-control-color">
                     <h3>FONDO</h3>
