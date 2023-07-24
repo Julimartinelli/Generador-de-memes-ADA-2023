@@ -127,12 +127,13 @@ const cambiarTextoInferior = () => {
 //selector de fuentes
 const selectorFuente = document.getElementById("selector-fuente");
 
+selectorFuente.addEventListener("change", () => changeFontFamily());
+
 const cambioFuente = () => {
     topText.style.fontFamily = `${selectorFuente.value}`;
     bottomText.style.fontFamily = `${selectorFuente.value}`;
 };
 
-fontSelector.addEventListener("change", () => changeFontFamily());
 
 //BOTÓN DESCARGA
 const botonDescarga = document.getElementById("boton-descarga");
