@@ -105,7 +105,6 @@ header {
 .aside {
     width: 230px;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -133,7 +132,6 @@ header {
     border: 0;
     color: var(--color-text);
     background-color: transparent;
-    display: block;
     outline: 0;
     font-size: 15px;
 }
