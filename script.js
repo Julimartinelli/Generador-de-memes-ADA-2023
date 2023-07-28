@@ -112,18 +112,15 @@ inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior());
 
 const cambiarTextoSuperior = () => {
     contenedorTexto.innerText = inputTextoSuperior.value;
-    contenedorTexto.innerText = `${inputTextoSuperior.value}`;
 };
 
-
-
 const inputTextoInferior = document.getElementById("input-texto-inferior");
+const contenedorTextoInferior = document.getElementById("bottom-text");
 
-inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior());
+inputTextoInferior.addEventListener("input", () => cambiarTextoInferior());
 
 const cambiarTextoInferior = () => {
-    cambiarTextoSuperior.innerText = inputTextoSuperior.value;
-    cambiarTextoSuperior.innerText = `${inputTextoInferior.value}`;
+    contenedorTextoInferior.innerText = inputTextoInferior.value;
 };
 
 //selector de fuentes
@@ -135,7 +132,6 @@ const cambioFuente = () => {
     topText.style.fontFamily = `${selectorFuente.value}`;
     bottomText.style.fontFamily = `${selectorFuente.value}`;
 };
-
 
 //BOTÓN DESCARGA
 const botonDescarga = document.getElementById("boton-descarga");
