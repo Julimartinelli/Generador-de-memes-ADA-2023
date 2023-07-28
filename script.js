@@ -106,14 +106,16 @@ colorPicker.addEventListener("input", () => cambiarFondoMeme());
 
 //CAMBIOS ASIDE TEXTO
 const inputTextoSuperior = document.getElementById("input-texto-superior");
-const contenedorTexto = document.getElementById("contenedor-texto");
+const contenedorTexto = document.getElementById("top-text");
 
 inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior());
 
 const cambiarTextoSuperior = () => {
-    cambiarTextoSuperior.innerText = inputTextoSuperior.value;
-    cambiarTextoSuperior.innerText = `${inputTextoSuperior}`;
+    contenedorTexto.innerText = inputTextoSuperior.value;
+    contenedorTexto.innerText = `${inputTextoSuperior.value}`;
 };
+
+
 
 const inputTextoInferior = document.getElementById("input-texto-inferior");
 
@@ -121,7 +123,7 @@ inputTextoSuperior.addEventListener("input", () => cambiarTextoSuperior());
 
 const cambiarTextoInferior = () => {
     cambiarTextoSuperior.innerText = inputTextoSuperior.value;
-    cambiarTextoSuperior.innerText = `${inputTextoInferior}`;
+    cambiarTextoSuperior.innerText = `${inputTextoInferior.value}`;
 };
 
 //selector de fuentes
